@@ -196,6 +196,17 @@ main{
     background-color: #555;
 }
 
+.mensagem-sucesso {
+  background-color: #e0ffe5;
+  border: 1px solid #88cc99;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 40px auto;
+  color: #2a7a3a;
+}
+
 /*Propriedades do rodapé*/
 footer{
     background-color: #333;
