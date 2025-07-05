@@ -1,0 +1,214 @@
+/*Propriedades para o corpo da página*/
+html, body{
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/*Propriedades para o título do site*/
+.titulo-site{
+    background: linear-gradient(to right,#f0f4f8, #5196cb);
+    /*background-color: #5196cb;*/
+    text-align: center;
+    padding: 15px 10px 0px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.titulo-site h1{
+    font-size: 3rem;
+    margin: 0;
+    color: #222;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+.titulo-site h1 i {
+  margin-right: 10px;
+  color: #444;
+}
+
+.titulo-site p{
+    margin-top: 10px;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #555;
+    font-weight: 300;
+}
+
+/*Propriedades para todos os títulos h1*/
+h1{
+    font-size: 2.2rem;
+    color: #222;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/*Propriedades para todos os parágrafos*/
+p{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/*Propriedades do cabeçalho*/
+header{
+    background: #333;
+    padding: 10px 0;
+}
+
+/*Propriedades da barra de navegação*/
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li{
+    margin: 0 20px;
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+/*Destacar de acordo com cursor*/
+nav ul li a:hover{
+    background-color: #5196cb;
+    color: #333;
+    font-weight: bold;
+}
+
+/*Destacar com a seleção*/
+nav ul li a.ativo{
+    background-color: #5196cb;
+    color: #333;
+    font-weight: bold;
+}
+
+/*Propriedades do conteúdo principal*/
+main{
+    flex: 1;
+    padding: 20px;
+    min-height: 400px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/*Propriedades dos ícones das redes sociais*/
+.social-link{
+    display: inline-block;
+    color: white;
+    background-color: #333;
+    padding: 10px 15px;
+    margin: 8px 10px 0 0;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.social-link i{
+    margin-right: 4px;
+    font-size: 18px;
+}
+
+.social-link:hover{
+    background-color: #555;
+}
+
+.social-link.github{
+    background-color: #24292e;   
+}
+
+.social-link.linkedin {
+  background-color: #0077b5;
+}
+
+.social-link.github:hover {
+  background-color: #3c434a;
+}
+
+.social-link.linkedin:hover {
+  background-color: #005f8d;
+}
+
+/*Ajustes dos botões*/
+.botoes-sociais{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+/*Propriedades do formulário*/
+.form-contato{
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.form-contato label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-contato input,
+.form-contato textarea{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.form-contato textarea{
+    resize: vertical;
+}
+
+.form-contato button{
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-contato button:hover{
+    background-color: #555;
+}
+
+/*Propriedades do rodapé*/
+footer{
+    background-color: #333;
+    padding: 10px 0;
+}
+
+footer p{
+    text-align: center;
+    color: white;
+    margin: 0;
+}
+
+/*Permitir que a página se adapte a diferentes tipos de tela*/
+*{
+    box-sizing: border-box;
+}
