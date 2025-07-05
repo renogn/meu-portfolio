@@ -5,12 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contato</title>
     <link rel="stylesheet" href="style.css"> <!-- Link para arquivo CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!-- Link para ícones -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"> <!-- Link para fonte -->
 </head>
+
+<!-- JavaScript para tornar o envio do formulário funcional -->
+<script>
+  const form = document.getElementById('form-contato');
+  const mensagem = document.getElementById('mensagem-sucesso');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        form.style.display = 'none';
+        mensagem.style.display = 'block';
+      } else {
+        alert('Ocorreu um erro. Tente novamente mais tarde.');
+      }
+    }).catch(error => {
+      alert('Erro ao enviar. Verifique sua conexão.');
+    });
+  });
+</script>
+
 <body>
     <!-- Título do Site -->
     <div class="titulo-site">
-        <h1>Meu Portfólio</h1>
+        <h1><i class="fas fa-laptop-code"></i> Meu Portfólio</h1>
         <p>Engenheiro de Dados | Projetos e Contato</p>
     </div>
 
@@ -29,7 +60,7 @@
     <!-- Definindo o conteúdo principal da página -->
     <main>
         <h1>Fale Comigo</h1>
-        <form class="form-contato" action="#" method="post">
+        <form class="form-contato" action="https://formsubmit.co/renoneto123@gmail.com" method="POST">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
 
@@ -39,8 +70,16 @@
             <label for="mensagem">Mensagem:</label>
             <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem" required></textarea>
 
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+
             <button type="submit">Enviar</button>
         </form>
+
+        <div id="mensagem-sucesso" class="mensagem-sucesso" style="display: none;">
+            <h2>✅ Mensagem enviada com sucesso!</h2>
+            <p>Obrigado por entrar em contato. Responderei em breve.</p>
+        </div>
     </main>
 
     <!-- Rodapé da Página -->
